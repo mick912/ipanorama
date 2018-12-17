@@ -32,6 +32,7 @@ $(document).ready(function(){
                     type: '{{scene.type}}',
                     yaw: 0,
                     pitch: 0,
+                    pitchLimits: true,
                     compassNorthOffset: 0,
                     image:
                     {% if scene.type == 'cube' %}

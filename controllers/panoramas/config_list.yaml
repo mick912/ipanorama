@@ -1,4 +1,4 @@
-title: SlideShows
+title: iPanorama 360
 modelClass: Mirjan\Ipanorama\Models\Panorama
 list: $/mirjan/ipanorama/models/panorama/columns.yaml
 recordUrl: 'mirjan/ipanorama/panoramas/update/:id'

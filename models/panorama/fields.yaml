@@ -20,7 +20,7 @@ tabs:
             form:
                 fields:
                     image[image]:
-                        label: 'mirjan.ipanorama::lang.ipanorama.panorama_image'
+                        label: 'mirjan.ipanorama::lang.ipanorama.image'
                         mode: image
                         span: left
                         type: mediafinder
