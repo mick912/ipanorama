@@ -1,0 +1,11 @@
+title: SlideShows
+modelClass: Mirjan\Ipanorama\Models\Panorama
+list: $/mirjan/ipanorama/models/panorama/columns.yaml
+recordUrl: 'mirjan/ipanorama/panoramas/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

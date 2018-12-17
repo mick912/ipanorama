@@ -1,0 +1,68 @@
+<div id="panorama-{{panorama.panoramas.getKey}}" class="panorama"></div>
+<p class="panorama-desc">
+    {{panorama.panoramas.desc|raw}}
+</p>
+{% put scripts %}
+<script>
+$(document).ready(function(){
+    var panorama =  $('#panorama-{{panorama.panoramas.getKey}}').ipanorama({
+        autoLoad: true,
+        theme: "ipnrm-theme-modern",
+        hotSpotSetup: false,
+        grab: true,
+        hoverGrab: false,
+        showControlsOnHover: false,
+        showSceneThumbsCtrl: false,
+        showSceneMenuCtrl: false,
+        showSceneNextPrevCtrl: true,
+        showZoomCtrl: true,
+        showShareCtrl: false,
+        showFullscreenCtrl: true,
+        sceneNextPrevLoop: true,
+        popoverHideTrigger: "manual",
+        popoverShowClass: "fx-rotateIn",
+        popoverHideClass: "fx-bounceOut",
+        pitchLimits: false,
+        sceneThumbsVertical: true,
+        sceneBackgroundLoad: true,
+        sceneId: "{{panorama.panoramas.content[0].name}}",
+        scenes: {
+            {% for scene in panorama.panoramas.content %}
+            {{scene.name}}: {
+                    type: '{{scene.type}}',
+                    yaw: 0,
+                    pitch: 0,
+                    compassNorthOffset: 0,
+                    image:
+                    {% if scene.type == 'cube' %}
+                        {
+                            front: "{{scene.image.image|media}}",
+                            back: "{{scene.image.back|media}}",
+                            left: "{{scene.image.left|media}}",
+                            right: "{{scene.image.right|media}}",
+                            top: "{{scene.image.top|media}}",
+                            bottom: "{{scene.image.bottom|media}}"
+                        },
+                    {% else %}
+                        "{{scene.image.image|media}}",
+                    {% endif %}
+                    {% if scene.markers is not empty %}
+                    hotSpots: [
+                        {% for marker in  scene.markers %}
+                            {
+                                yaw: {{ marker.left }},
+                                pitch: {{ marker.top }},
+                                sceneId: '{{ marker.scene }}',
+                                popoverShow: true,
+                                popoverContent: "{{ marker.title }}"
+                            }{% if not loop.last %},{% endif %}
+                        {% endfor %}
+                    ]
+                    {% endif %}
+                }{% if not loop.last %},{% endif %}
+            {% endfor %}
+        }
+    });
+});
+</script>
+{% endput %}

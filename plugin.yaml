@@ -1,0 +1,12 @@
+plugin:
+    name: 'mirjan.ipanorama::lang.plugin.name'
+    description: 'mirjan.ipanorama::lang.plugin.description'
+    author: Mirjan
+    icon: oc-icon-street-view
+    homepage: ''
+navigation:
+    panoramas:
+        label: 'Panorama 360'
+        url: mirjan/ipanorama/panoramas
+        icon: icon-street-view
+

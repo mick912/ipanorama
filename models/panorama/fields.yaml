@@ -1,0 +1,100 @@
+fields:
+tabs:
+    fields:
+        title:
+            label: 'mirjan.ipanorama::lang.ipanorama.title'
+            span: left
+            type: text
+            tab: 'mirjan.ipanorama::lang.ipanorama.panoramas'
+        desc:
+            label: ''
+            span: full
+            type: richeditor
+            tab: 'mirjan.ipanorama::lang.ipanorama.desc'
+        content:
+            label: 'mirjan.ipanorama::lang.ipanorama.panoramas'
+            prompt: 'Add new scene'
+            span: full
+            type: repeater
+            tab: 'mirjan.ipanorama::lang.ipanorama.panoramas'
+            form:
+                fields:
+                    image[image]:
+                        label: 'mirjan.ipanorama::lang.ipanorama.panorama_image'
+                        mode: image
+                        span: left
+                        type: mediafinder
+                        dependsOn: type
+                    name:
+                        label: 'mirjan.ipanorama::lang.ipanorama.panorama_title'
+                        span: right
+                        type: text
+                    type:
+                        label: 'mirjan.ipanorama::lang.ipanorama.type'
+                        span: right
+                        type: dropdown
+                        options:
+                          sphere: 'mirjan.ipanorama::lang.ipanorama.sphere'
+                          cube: 'mirjan.ipanorama::lang.ipanorama.cube'
+                          cylinder: 'mirjan.ipanorama::lang.ipanorama.cylinder'
+                    markers:
+                        label: 'mirjan.ipanorama::lang.markers.markers'
+                        prompt: 'Add new marker'
+                        span: right
+                        type: repeater
+                        tab: 'mirjan.ipanorama::lang.markers.markers'
+                        form:
+                            fields:
+                                left:
+                                    label: 'mirjan.ipanorama::lang.markers.left'
+                                    span: left
+                                    type: number
+                                top:
+                                    label: 'mirjan.ipanorama::lang.markers.top'
+                                    span: right
+                                    type: number
+                                title:
+                                    label: 'mirjan.ipanorama::lang.markers.title'
+                                    span: full
+                                    type: text
+                                scene:
+                                    label: 'mirjan.ipanorama::lang.markers.scene'
+                                    span: full
+                                    type: text
+
+                    image[back]:
+                        label: 'mirjan.ipanorama::lang.ipanorama.panorama_image_back'
+                        mode: image
+                        hidden: true
+                        span: left
+                        type: mediafinder
+                        dependsOn: type
+                    image[left]:
+                        label: 'mirjan.ipanorama::lang.ipanorama.panorama_image_left'
+                        mode: image
+                        hidden: true
+                        span: left
+                        type: mediafinder
+                        dependsOn: type
+                    image[right]:
+                        label: 'mirjan.ipanorama::lang.ipanorama.panorama_image_right'
+                        mode: image
+                        hidden: true
+                        span: left
+                        type: mediafinder
+                        dependsOn: type
+                    image[top]:
+                        label: 'mirjan.ipanorama::lang.ipanorama.panorama_image_top'
+                        mode: image
+                        hidden: true
+                        span: left
+                        type: mediafinder
+                        dependsOn: type
+                    image[bottom]:
+                        label: 'mirjan.ipanorama::lang.ipanorama.panorama_image_bottom'
+                        mode: image
+                        hidden: true
+                        span: left
+                        type: mediafinder
+                        dependsOn: type
+

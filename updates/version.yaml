@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table mirjan_ipanorama_panoramas'
+    - builder_table_create_mirjan_ipanorama_panoramas.php
+1.0.3:
+    - 'Updated table mirjan_ipanorama_panoramas'
+    - builder_table_update_mirjan_ipanorama_panoramas.php

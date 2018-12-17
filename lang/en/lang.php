@@ -1,0 +1,32 @@
+<?php return [
+    'plugin' => [
+        'name' => 'Panorama 360',
+        'description' => 'Panorama 360 is a lightweight and rich-feature panorama viewer for the web',
+    ],
+    'markers' => [
+        'markers' => 'Markers',
+        'left' => 'Left',
+        'top' => 'Top',
+        'title' => 'Title',
+        'scene' => 'Scene name link',
+    ],
+    'ipanorama' => [
+        'type' => 'Type',
+        'cube' => 'Cube',
+        'sphere' => 'Sphere',
+        'cylinder' => 'Cylinder',
+        'title' => 'Panorama Title',
+        'desc' => 'Description',
+        'panoramas' => 'Scenes',
+        'image' => 'Image',
+        'panorama_image_back' => 'Back Image',
+        'panorama_image_left' => 'Left Image',
+        'panorama_image_right' => 'Right Image',
+        'panorama_image_top' => 'Top Image',
+        'panorama_image_bottom' => 'Bottom Image',
+        'panorama_title' => 'Scene name',
+        'manage_panorama_shows' => 'User can manage all aspects of the slide show (slides and settings)',
+        'panorama_shows' => 'Slideshows',
+        'settings' => 'Settings',
+    ],
+];

@@ -1,0 +1,11 @@
+columns:
+    title:
+        label: 'mirjan.ipanorama::lang.ipanorama.title'
+        type: text
+        searchable: true
+        sortable: true
+    id:
+        label: 'mirjan.ipanorama::lang.ipanorama.id'
+        type: number
+        searchable: true
+        sortable: true

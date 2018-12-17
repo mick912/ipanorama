@@ -1,0 +1,10 @@
+name: Panorama
+modelClass: Mirjan\Ipanorama\Models\Panorama
+form: $/mirjan/ipanorama/models/panorama/fields.yaml
+defaultRedirect: mirjan/ipanorama/panoramas
+create:
+    redirect: 'mirjan/ipanorama/panoramas/update/:id'
+    redirectClose: mirjan/ipanorama/panoramas
+update:
+    redirect: mirjan/ipanorama/panoramas
+    redirectClose: mirjan/ipanorama/panoramas
